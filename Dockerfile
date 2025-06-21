@@ -11,7 +11,7 @@ RUN go mod download
 COPY . .
 
 #Artifact called main will be created in Docker image
-RUN go build -o main .4
+RUN go build -o main .
 
 #Final stage - Distroless Image
 FROM gcr.io/distroless/base
