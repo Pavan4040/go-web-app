@@ -14,7 +14,7 @@ COPY . .
 RUN go build -o main .4
 
 #Final stage - Distroless Image
-FROM gcr.io/distroless/bases
+FROM gcr.io/distroless/base
 
 COPY --from=base /app/main .
 
